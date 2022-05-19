@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style2.css">
+</head>
+  <body>
+
+    <ul>
+      <% if(messages.success_msg) { %>
+      <li><%= messages.success_msg %></li>
+      <% } %>
+    </ul>
+
+    <ul>
+      <% if (messages.error) { %>
+      <li><%= messages.error %></li>
+      <% } %>
+    </ul>
+    <!-- Début forme du login de notre site -->
+    <div class="login-page">
+        <div class="form">
+            <form id="myForm" action="/users/login" method="POST">
+                    <div class="registerbox">
+                            <input type="email" name="email" placeholder="Enter Email ID"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  required>
+                             <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                            <input class="but" type="submit" id="btnSubmit" value="Login"/>
+                            <p class="message">Don't have an account? <a href="/users/register">Register</a></p>
+                </div>
+            </form>
+        </div>
+      </div>
+    <!-- Fin forme du login de notre site -->
+
+</body>
+
+</html>
